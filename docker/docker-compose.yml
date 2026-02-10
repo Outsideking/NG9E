@@ -1,1 +1,11 @@
-
+version: '3'
+services:
+  ng9e_core:
+    build: ../
+    container_name: ng9e_core
+    ports:
+      - "5000:5000"
+    env_file:
+      - ../.env
+    volumes:
+      - ../storage:/app/storage
